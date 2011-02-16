@@ -1,0 +1,110 @@
+Diretório da biblioteca da ST (libstm32.a)
+------------------------------------------
+
+Pré-requisitos:
+
+  - CodeSourcery G++ Lite (target OS: EABI) - ferramentas de desenvolvimento.
+
+Conteúdo:
+  - src             : diretório de códigos-fontes. 
+                      Obs.: Basta incluir um arquivo ".c" neste diretório para 
+                      que ele seja tratado como um novo código-fonte da
+                      biblioteca. 
+  - inc             : diretório de arquivos de cabeçalho.
+                      Obs.: Para incluí-los nos códigos-fontes da biblioteca 
+											ou do projeto, basta usar um " #include "cabelho.h" ".
+											Essa característica é possível pelo uso da opção "-I" 
+											utilizada para compilar a biblioteca e o projeto, a qual
+											indica o diretório "inc" com diretório de procura por 
+											arquivos de cabelho.
+											
+  - template        : diretório de templates.
+                      Obs.: para utilizar os templates, prefira copiá-los e 
+                            renomeá-los a copiar seu conteúdo, pois assim é 
+                            mantido o tipo de codificação do arquivo, 
+                            fundamental para o uso da ferramenta Doxygen.
+  - CLEAN.cmd       : elimina todos os arquivos gerados durante a compilação 
+                      da biblioteca.
+  - LEIA-ME.txt     : este arquivo.
+  - MAKE_ALL.cmd    : compila somente o que foi alterado no projeto, gerando 
+                      um novo arquivo ".a".
+  - Makefile        : arquivo utilizado para gerenciar toda a biblioteca, 
+                      possuindo as regras e comandos necessários para compilar 
+ 										  e gravar o projeto.
+                      Obs.: digite "cs-make help" de dentro deste diretório 
+                      para obter ajuda sobre como utilizá-lo.
+  - REBUILD_ALL.cmd : limpa e recompila todos os arquivos da biblioteca, 
+	                    gerando um novo arquivo ".hex".
+
+Partes que compoem a biblioteca "libstm32.a":
+
+- STM32F10x Standard Peripherals Library Drivers: 
+  - diretório "src":
+    misc.c 
+    stm32f10x_adc.c 
+    stm32f10x_bkp.c 
+    stm32f10x_can.c 
+    stm32f10x_crc.c 
+    stm32f10x_dac.c 
+    stm32f10x_dbgmcu.c 
+    stm32f10x_dma.c 
+    stm32f10x_exti.c 
+    stm32f10x_flash.c 
+    stm32f10x_fsmc.c 
+    stm32f10x_gpio.c 
+    stm32f10x_i2c.c 
+    stm32f10x_iwdg.c 
+    stm32f10x_pwr.c 
+    stm32f10x_rcc.c 
+    stm32f10x_rtc.c 
+    stm32f10x_sdio.c 
+    stm32f10x_spi.c 
+    stm32f10x_tim.c 
+    stm32f10x_usart.c 
+    stm32f10x_iwdg.c 
+
+  - diretório "inc":
+    misc.h 
+    stm32f10x_adc.h 
+    stm32f10x_bkp.h 
+    stm32f10x_can.h 
+    stm32f10x_crc.h 
+    stm32f10x_dac.h 
+    stm32f10x_dbgmcu.h 
+    stm32f10x_dma.h 
+    stm32f10x_exti.h 
+    stm32f10x_flash.h 
+    stm32f10x_fsmc.h 
+    stm32f10x_gpio.h 
+    stm32f10x_i2c.h 
+    stm32f10x_iwdg.h 
+    stm32f10x_pwr.h 
+    stm32f10x_rcc.h 
+    stm32f10x_rtc.h 
+    stm32f10x_sdio.h 
+    stm32f10x_spi.h 
+    stm32f10x_tim.h 
+    stm32f10x_usart.h 
+    stm32f10x_iwdg.h 
+
+- STM32F10x Standard Peripherals Firmware Library:
+  - src:
+    core_cm3.c
+    system_stm32f10x.c
+    startup_stm32f10x_md.c
+    
+  - inc:
+    core_cm3.h
+    stm32f10x.h
+    system_stm32f10x.h
+  
+NOTA:
+
+  - Por possuir um arquivo "Makefile", o qual concentra todas as regras e 
+	  comandos necessários para a compilação da biblioteca, este projeto pode 
+		ser utilizado por qualquer IDE que possua suporte à execução de
+		ferramentas externas.
+		Vide os arquivos (.cmd) ou "cs-make help" para obter mais informações de 
+		como utilizar o arquivo Makefile deste projeto em seu IDE preferido.
+		Exemplos de IDE: Programmer's Notepad e Eclipse.
+		

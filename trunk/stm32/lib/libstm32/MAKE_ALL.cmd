@@ -1,0 +1,3 @@
+@echo Compilando tudo o que foi alterado na biblioteca...
+@cs-make all
+@pause

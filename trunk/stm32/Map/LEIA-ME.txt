@@ -1,0 +1,4 @@
+Esta pasta é utilizada pela ferramenta STMFlashLoader, a qual é utilizada para 
+gravar o firmware no microcontrolador.
+
+Esta pasta foi copiada da própria ferramenta STMFlashLoader V1.3.
