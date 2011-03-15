@@ -1,0 +1,6 @@
+Sugestões de implementação (BluePrints)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2011-03-15  Rafael Noronha <rafael@pdsolucoes.com.br>
+
+  * ...
