@@ -6,19 +6,22 @@
 # - make clean     : limpa todos os arquivos de saída do projeto.
 # - make all       : compila os arquivos alterados do projeto, gerando um 
 #                    novo arquivo ".bin".
-# - make clean all : recompila todo o projeto gerando um novo ".bin".
-# - make program   : grava a placa com o atual ".bin" gerado.
-# - make doxygen   : gera a documentação do código fonte no diretório 
-#                    "src/docs".
+# - make clean all : recompila todo o projeto gerando um novo arquivo de 
+#                    imagem do firmware (".bin"/".hex").  
+# - make program   : grava a placa com o atual arquivo de imagem do firmware 
+#                    (".bin"/".hex") gerado.
+# - make doxygen   : gera a documentação do código-fonte no diretório 
+#                    "src/docs" (necessário ter instalada a ferramenta 
+#                    Doxygen).
 #
 # Obs.: para executar os comandos, basta entrar no Prompt de comandos 
 #       (Windows) ou no Terminal de comandos (Linux) ir até o diretório raiz 
 #       do projeto e digitá-los. 
-#       Por exemplo: digitando "make clean", todos arquivos de saída do 
-#       projeto serão apagados, permanecendo somente os arquivos-fonte.
+#       Por exemplo: digitando "cs-make clean"(Windows)/"make clean"(Linux), 
+#       todos arquivos de saída do projeto serão apagados, permanecendo 
+#       somente os arquivos-fonte.
 #
-# Autor           : Rafael Noronha <rafael@pdsolucoes.com.br>
-# Data de criação : 14/02/2011
+# Autor: PD Soluções <pdsolucoes@pdsolucoes.com.br>
 ##############################################################################
 
 
@@ -299,7 +302,7 @@ program: $(TARGET).hex
 #-----------------------------------------------------------------------------
 else
 program: $(TARGET).bin
-	@echo "Gravando o dispositivo..."
+	@echo "Gravando o dispositivo..."	
 	@stm32loader.py -e -w -p /dev/ttyUSB0 -b 115200 -a 0x8000000 $(TARGET).bin
 endif
 #-----------------------------------------------------------------------------
@@ -391,9 +394,6 @@ help:
 	@echo "===============================================================" 
 
 # Inclusão dos arquivos de dependência (*.d)
-#-include $(shell mkdir $(DIR_OUT)\dep > NUL &>1 ) $(wildcard $(DIR_OUT)/$(DIR_DEP)/*.d)
-
-# Include the dependency files.
 -include -$(wildcard $(DIR_OUT)/$(DIR_DEP)/*.d)
 	
 .DEFAULT_GOAL := all
