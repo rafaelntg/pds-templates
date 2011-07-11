@@ -32,11 +32,7 @@
  *    arquivos "template.h", "template.c" e, caso necessário, o arquivo
  *    "template.tab" para constituir um novo módulo.
  *
- *  @author Rafael Noronha
- *
- *  @author ENGWORKS - DPD
- *  @date 2009
- *
+ *  @author PD Soluções <pdsolucoes@pdsolucoes.com.br>
  ****************************************************************************/
 
 /*****************************************************************************

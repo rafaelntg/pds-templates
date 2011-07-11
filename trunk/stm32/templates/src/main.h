@@ -1,8 +1,9 @@
 #ifndef _MAIN_H
 #define _MAIN_H
-                            /*********************
+/*                          **********************
 ****************************** MÓDULO  :  MAIN  ******************************
-                            *********************/
+*                           **********************
+*/
 /** @file main.h
  *
  *  Módulo principal do projeto.
@@ -19,73 +20,15 @@
  *  @attention
  *  Todo projeto deve possuir um módulo MAIN.
  *
- *  @author Rafael Noronha
- *
- *  @author ENGWORKS - DPD
- *  @date 2009
- *
+ *  @author PD Soluções <pdsolucoes@pdsolucoes.com.br>
  ****************************************************************************/
 
 /****************************************************************************/
-/** @mainpage Substitua este texto pelo apelido do projeto (Template v9.01.1)
+/** @mainpage Nome do Projeto
  *
  *  @section sec_resumo Resumo
  *
- *  - Comunicação : USB (idProduct=0x0E8A; idVendor=0x1781) (exemplo)
- *
- *  - Mecanismo : FUJITSU 3" COM GUILHOTINA 150mm/s 30mm/s (exemplo)
- *
- *  - Gaveta : NÃO (exemplo)
- *
- *  - Chipset : NÃO (exemplo)
- *
- *  - Processador : PHILIPS LPC2146 (exemplo)
- *
- *  - Modo gráfico : FILETES (exemplo)
- *
- *  - Erro de guilhotina : SIM (exemplo)
- *
- *  - Pouco papel : SIM (exemplo)
- *
- *  - Driver Windows : ENGWORKS T080HF (exemplo)
- *
- *  - Tamanho do Papel : 80mm (exemplo)
- *
- *  - Mais informações: @ref pag_sinopse
- *
- *  @section sec_firmware Firmware
- *
- *  - Versão de firmware: SLxxyyzz-Rxx
- *
- *  - Data: dd/mm/aaaa
- *
- *  - Hora: hh:mm
- *
- *  - Alterado por:
- *
- *  - Alterações:
- *
- ****************************************************************************/
-
-/****************************************************************************/
-/** @page pag_sinopse Sinopse do projeto
- *
- *  - Data de início do projeto: dd/mm/aaaa
- *
- *  - Data prevista do término: dd/mm/aaaa
- *
- *  - Cliente externo do projeto: Nome (Código)
- *
- *  - Status/andamento do projeto: em desenvolvimento
- *
- *  - Características do firmware:
- *
- *  - Previsão de outros software:
- *
- *  - Características do hardware:
- *
- *  - Outras observações/detalhes:
- *
+ *  - Resumo do projeto.
  ****************************************************************************/
 
 /*****************************************************************************
