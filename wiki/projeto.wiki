@@ -1,0 +1,10 @@
+#summary Projeto de templates da PD Soluções.
+#labels projeto,descrição,detalhes
+
+= O Projeto =
+
+Este projeto tem o objetivo de armazenar e disponibilizar arquivos úteis para o desenvolvimento de software, os quais podem ser facilmente utilizados como base em projetos futuros.
+
+= Observações =
+
+* Os arquivos de _template_ também são conhecidos como _skeleton_ (esqueleto), os quais possuem uma estrutura base sugerida (às vezes exigida) ao desenvolvedor que irá utilizá-los.
