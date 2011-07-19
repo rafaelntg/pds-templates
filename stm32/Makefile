@@ -257,7 +257,7 @@ $(DIR_LIB)/libstm32.a: $(DIR_SRC)/stm32f10x_conf.h
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
 clean:
-	@echo Limpando o projeto...
+	@echo "Limpando o projeto..."
 	@$(MAKE) --directory=$(DIR_LIB)/libstm32 -f Makefile clean
 	@$(RM) $(ALL_OBJS)
 	@$(RM) $(patsubst %, $(DIR_OUT)/$(DIR_DEP)/%.d, $(ALL_SRC_BASE_NOTDIR))
@@ -296,7 +296,7 @@ endif
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
 program: $(TARGET).hex
-	@echo Gravando o dispositivo...
+	@echo "Gravando o dispositivo..."
 	@STMFlashLoader -c --pn 1 --br 115200 --db 8 --pr EVEN --sb 1 --to 5000 \
                   -i STM32F10xxBxx \
                   -e --all \
@@ -348,14 +348,14 @@ tamanho: $(TARGET).elf
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
 $(DIR_OUT)/$(DIR_DEP):
-	@echo Criando diretorio $(DIR_OUT)\$(DIR_DEP)...
+	@echo "Criando diretorio $(DIR_OUT)\$(DIR_DEP)..."
 	@$(MKDIR) $(DIR_OUT)\$(DIR_DEP)
-	@echo Diretorio criado com sucesso!
+	@echo "Diretorio criado com sucesso!"
 
 $(DIR_OUT)/$(DIR_LST):
-	@echo Criando diretorio $(DIR_OUT)\$(DIR_LST)...
+	@echo "Criando diretorio $(DIR_OUT)\$(DIR_LST)..."
 	@$(MKDIR) $(DIR_OUT)\$(DIR_LST)
-	@echo Diretorio criado com sucesso!
+	@echo "Diretorio criado com sucesso!"
 #-----------------------------------------------------------------------------
 else
 $(DIR_OUT)/$(DIR_DEP):
@@ -373,19 +373,19 @@ endif
 cria_dirs_out: $(DIR_OUT)/$(DIR_DEP) $(DIR_OUT)/$(DIR_LST)
 
 help:
-	@echo "===============================================================" 
-	@echo "=                            HELP                             =" 
-	@echo "===============================================================" 
-	@echo "Sintaxe: \"make [Comando]\" "
-	@echo " " 
-	@echo "Comando:"
-	@echo "  help      : exibe estas informacoes."
-	@echo "  clean     : limpa todos os arquivos de saida do projeto."
+	@echo "==============================================================="
+	@echo "=                            HELP                             ="
+	@echo "==============================================================="
+	@echo "Sintaxe: make [Comando]                                        "
+	@echo "                                                               "
+	@echo "Comando:                                                       "
+	@echo "  help      : exibe estas informacoes.                         "
+	@echo "  clean     : limpa todos os arquivos de saida do projeto.     "
 	@echo "  all       : compila somente os arquivos alterados do projeto."
-	@echo "  clean all : recompila todo o projeto."
-	@echo "  program   : grava a placa com a atual compilacao do projeto."
-	@echo "  doxygen   : gera a documentacao do codigo-fonte."	
-	@echo "===============================================================" 
+	@echo "  clean all : recompila todo o projeto.                        "
+	@echo "  program   : grava a placa com a atual compilacao do projeto. "
+	@echo "  doxygen   : gera a documentacao do codigo-fonte.             "
+	@echo "==============================================================="
 
 # Inclusão dos arquivos de dependência (*.d)
 -include -$(wildcard $(DIR_OUT)/$(DIR_DEP)/*.d)
