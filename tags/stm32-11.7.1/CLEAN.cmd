@@ -1,0 +1,3 @@
+@echo Limpando todos os arquivo de saida do projeto...
+@cs-make clean
+@pause

@@ -1,0 +1,2 @@
+Acesse o seguinte link para saber as informações sobre a memória do micro:
+http://www.st.com/mcu/inchtml-pages-stm32.html

@@ -1,0 +1,59 @@
+LEIA-ME.txt
+-----------
+
+Projeto: Nome do Projeto.
+^^^^^^^
+
+Pré-requisitos
+^^^^^^^^^^^^^^
+  - CodeSourcery G++ Lite (target OS: EABI) - ferramentas de desenvolvimento.
+  - STM32FlashLoader - ferramenta para gravação do microcontrolador (Windows).
+  - STM32Loader - ferramenta para gravação do microcontrolador (Linux).
+  - Doxygen - ferramenta para a geração da documentação do código-fonte.
+  Obs.: estas ferramentas devem possuir seus diretórios de executáveis 
+        visíveis pela variável "PATH" do sistema.
+
+Conteúdo
+^^^^^^^^
+  - lib: diretório de bibliotecas.
+  - Map: diretório utilizado pela ferramenta "STM32FlashLoader".
+  - src: diretório de códigos-fontes. 
+      Obs.: Basta incluir um arquivo ".c" neste diretório para que ele seja 
+        tratado como um novo código-fonte do projeto. 
+        Somente um arquivo ".ld" deve ser mantido neste diretório. Ele será 
+        tratado como o linker-script do projeto.
+  - template: diretório de templates.
+      Obs.: para utilizar os templates, prefira copiá-los e renomeá-los a 
+        copiar seu conteúdo, pois assim é mantido o tipo de codificação do 
+        arquivo, fundamental para o uso da ferramenta Doxygen.
+  - CLEAN.(cmd/sh): elimina todos os arquivos gerados durante a compilação 
+      do projeto.
+  - GRAVA.(cmd/sh): programa o microcontrolador com o arquivo imagem do 
+      firmware gerado pela compilação do projeto.
+  - LEIA-ME.txt: este arquivo.
+  - MAKE_ALL.(cmd/sh): compila somente o que foi alterado no projeto, gerando 
+      um novo arquivo imagem.
+  - Makefile: arquivo utilizado para gerenciar todo o projeto, possuindo as 
+      regras e comandos necessários para compilar e gravar o projeto.
+      Obs.: digite "cs-make help" ("make help" no Linux) de dentro deste 
+        diretório para obter ajuda sobre como utilizá-lo.
+  - REBUILD_ALL.(cmd.sh): limpa e recompila todos os arquivos do projeto, 
+      gerando um novo arquivo imagem do firmware.
+  - out: diretório de saída da compilação do projeto. 
+      Obs.: criado durante a compilação do projeto e apagado durante a 
+        limpeza(clean) do projeto.
+
+Observações
+^^^^^^^^^^^
+  - Por possuir um arquivo "Makefile", o qual concentra todas as regras e 
+    comandos necessários para a compilação do projeto e gravação do 
+    microcontrolador, este projeto pode ser utilizado por qualquer IDE que 
+    possua suporte à execução de ferramentas externas.
+    Vide os arquivos (.cmd) ou "cs-make help" ("make help" no Linux) para 
+    obter mais informações de como utilizar o arquivo Makefile deste projeto 
+    em seu IDE preferido.
+    Exemplos de IDE: Programmer's Notepad e Eclipse.
+  - Os arquivos com extensão ".cmd" são executados no Windows e os ".sh" no
+    Linux.
+    
+    

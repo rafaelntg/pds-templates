@@ -1,0 +1,3 @@
+@echo Compilando tudo o que foi alterado no projeto...
+@cs-make all
+@pause

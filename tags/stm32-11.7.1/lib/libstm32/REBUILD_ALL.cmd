@@ -1,0 +1,3 @@
+@echo Limpando e reconstruindo toda a biblioteca...
+@cs-make clean all
+@pause
