@@ -11,7 +11,7 @@ Pré-requisitos
   - STM32Loader - ferramenta para gravação do microcontrolador (Linux).
   - Doxygen - ferramenta para a geração da documentação do código-fonte.
   Obs.: estas ferramentas devem possuir seus diretórios de executáveis 
-	      visíveis pela variável "PATH" do sistema.
+        visíveis pela variável "PATH" do sistema.
 
 Conteúdo
 ^^^^^^^^
@@ -46,14 +46,14 @@ Conteúdo
 Observações
 ^^^^^^^^^^^
   - Por possuir um arquivo "Makefile", o qual concentra todas as regras e 
-	  comandos necessários para a compilação do projeto e gravação do 
-		microcontrolador, este projeto pode ser utilizado por qualquer IDE que 
-		possua suporte à execução de ferramentas externas.
-		Vide os arquivos (.cmd) ou "cs-make help" ("make help" no Linux) para 
-		obter mais informações de como utilizar o arquivo Makefile deste projeto 
-		em seu IDE preferido.
-		Exemplos de IDE: Programmer's Notepad e Eclipse.
+    comandos necessários para a compilação do projeto e gravação do 
+    microcontrolador, este projeto pode ser utilizado por qualquer IDE que 
+    possua suporte à execução de ferramentas externas.
+    Vide os arquivos (.cmd) ou "cs-make help" ("make help" no Linux) para 
+    obter mais informações de como utilizar o arquivo Makefile deste projeto 
+    em seu IDE preferido.
+    Exemplos de IDE: Programmer's Notepad e Eclipse.
   - Os arquivos com extensão ".cmd" são executados no Windows e os ".sh" no
     Linux.
     
-		
+    
