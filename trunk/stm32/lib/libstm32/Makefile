@@ -4,6 +4,51 @@
 #   - Toolchain GNU Sourcery G++ Lite
 #   - Variável de sistema PATH contendo a pasta "bin" do Sourcery G++ Lite 
 
+##############################################################################
+# Identificação do sistema operacional utilizado
+##############################################################################
+
+ifndef COMSPEC
+  ifdef ComSpec
+    COMSPEC = $(ComSpec)
+  endif
+endif
+
+ifdef COMSPEC
+  WINDOWS=COMSPEC
+endif
+
+##############################################################################
+
+#-----------------------------------------------------------------------------
+ifdef WINDOWS
+# Comando de remoção dos arquivos (usado no "clean")
+RM = cs-rm -f
+
+# Comando de remoção de diretório (somente remove se ele estiver vazio)
+RMDIR = rmdir 
+
+# Comando para mover arquivos e diretórios
+MV = move
+
+# Make
+MAKE = cs-make
+#-----------------------------------------------------------------------------
+else
+# Comando de remoção dos arquivos (usado no "clean")
+RM = rm -f
+
+# Comando de remoção de diretório (somente remove se ele estiver vazio)
+RMDIR = rmdir --ignore-fail-on-non-empty
+
+# Comando para mover arquivos e diretórios
+MV = mv
+
+# Make
+MAKE = make
+endif
+#-----------------------------------------------------------------------------
+
 COMPILE_OPTS = -mcpu=cortex-m3 -mthumb -Wall -g -O0
 INCLUDE_DIRS = -I . -I inc -I $(PATH_PRJ_SRC) -I $(PATH_LIBSTM32_HEADERS)
 LIBRARY_DIRS = -L .
@@ -55,5 +100,5 @@ all: $(LIBSTM32_OUT)
 #clean: mantém somente os códigos-fonte da biblioteca
 clean:
 	@echo "Limpando os arquivos da biblioteca 'libstm32.a'..."
-	@-rm -f $(PATH_LIBSTM32_SRC)/*.o $(LIBSTM32_OUT)
+	@-$(RM) $(PATH_LIBSTM32_SRC)/*.o $(LIBSTM32_OUT)
 
