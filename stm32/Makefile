@@ -166,13 +166,16 @@ ifdef WINDOWS
 RM = cs-rm -f
 
 # Comando de remoção de diretório (somente remove se ele estiver vazio)
-RMDIR = rmdir 
+RMDIR = rmdir /S /Q
 
 # Comando para mover arquivos e diretórios
-MV = move
+MV = move /Y
 
 # Make
 MAKE = cs-make
+
+# Comando para a criação de uma estrutura de diretórios
+MKDIR = mkdir
 #-----------------------------------------------------------------------------
 else
 # Comando de remoção dos arquivos (usado no "clean")
@@ -186,6 +189,10 @@ MV = mv
 
 # Make
 MAKE = make
+
+# Comando para a criação de uma estrutura de diretórios
+MKDIR = mkdir -p
+
 endif
 #-----------------------------------------------------------------------------
 
@@ -250,7 +257,7 @@ $(DIR_LIB)/libstm32.a: $(DIR_SRC)/stm32f10x_conf.h
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
 clean:
-	@echo "Limpando o projeto..."
+	@echo Limpando o projeto...
 	@$(MAKE) --directory=$(DIR_LIB)/libstm32 -f Makefile clean
 	@$(RM) $(ALL_OBJS)
 	@$(RM) $(patsubst %, $(DIR_OUT)/$(DIR_DEP)/%.d, $(ALL_SRC_BASE_NOTDIR))
@@ -259,15 +266,11 @@ clean:
 	@$(RM) $(TARGET).elf
 	@$(RM) $(TARGET).bin
 	@$(RM) $(TARGET).hex
-	@$(RM) $(DIR_OUT)/doxygen.wrn
-	@-echo "@rmdir /S /Q %1 > NUL 2>&1" > rmdir_aux.bat 
-	@-rmdir_aux.bat $(DIR_OUT)\docs
-	@-echo "@rmdir %1 > NUL 2>&1" > rmdir_aux.bat 
-	@-rmdir_aux.bat $(DIR_OUT)\$(DIR_DEP)
-	@-rmdir_aux.bat $(DIR_OUT)\$(DIR_LST)
-	@-rmdir_aux.bat $(DIR_OUT)\docs
-	@-rmdir_aux.bat $(DIR_OUT)
-	@-$(RM) rmdir_aux.bat
+	@$(RM) $(DIR_OUT)\doxygen.wrn
+	@-$(RMDIR) $(DIR_OUT)\$(DIR_DEP)
+	@-$(RMDIR) $(DIR_OUT)\$(DIR_LST)
+	@-$(RMDIR) $(DIR_OUT)\docs
+	@-$(RMDIR) $(DIR_OUT)
 else
 #-----------------------------------------------------------------------------
 clean:
@@ -293,7 +296,7 @@ endif
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
 program: $(TARGET).hex
-	@echo "Gravando o dispositivo..."
+	@echo Gravando o dispositivo...
 	@STMFlashLoader -c --pn 1 --br 115200 --db 8 --pr EVEN --sb 1 --to 5000 \
                   -i STM32F10xxBxx \
                   -e --all \
@@ -311,13 +314,10 @@ endif
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
 doxygen:
-	@echo "Gerando documentacao pelo Doxygen..."
-	@-echo "@cd $(DIR_SRC) & @doxygen doxygen.cfg " > doxygen_aux.bat 
-	@-echo "@xcopy /E /I /Y docs ..\\$(DIR_OUT)\\docs " >> doxygen_aux.bat 
-	@-echo "@rmdir /S /Q docs " >> doxygen_aux.bat 
-	@-echo "@move /Y doxygen.wrn ..\\$(DIR_OUT) " >> doxygen_aux.bat 
-	@doxygen_aux.bat
-	@-$(RM) doxygen_aux.bat
+	@echo Gerando documentacao pelo Doxygen...
+	@-$(RMDIR) $(DIR_OUT)\docs
+	@-$(MKDIR) $(DIR_OUT)
+	@cmd /c "cd $(DIR_SRC) & doxygen doxygen.cfg & $(MV) doxygen.wrn ..\$(DIR_OUT)\ & $(MV) docs ..\$(DIR_OUT)\ & cd .."
 #-----------------------------------------------------------------------------
 else
 doxygen:
@@ -347,31 +347,25 @@ tamanho: $(TARGET).elf
 # Preparação dos diretórios de saída
 #-----------------------------------------------------------------------------
 ifdef WINDOWS
-# Obs.: foi necessario criar um arquivo auxiliar para conseguir executar o 
-#       comando "mkdir" corretamente no Windows.
 $(DIR_OUT)/$(DIR_DEP):
-	@echo "Criando diretorio $(DIR_OUT)/$(DIR_DEP)..."
-	@-echo "@mkdir %1 > NUL 2>&1" > mkdir_aux.bat 
-	@-mkdir_aux.bat $(DIR_OUT)\$(DIR_DEP)
-	@-$(RM) mkdir_aux.bat
-	@echo "Diretorio criado com sucesso!"
+	@echo Criando diretorio $(DIR_OUT)\$(DIR_DEP)...
+	@$(MKDIR) $(DIR_OUT)\$(DIR_DEP)
+	@echo Diretorio criado com sucesso!
 
 $(DIR_OUT)/$(DIR_LST):
-	@echo "Criando diretorio $(DIR_OUT)/$(DIR_LST)..."
-	@-echo "@mkdir %1 > NUL 2>&1" > mkdir_aux.bat 
-	@-mkdir_aux.bat $(DIR_OUT)\$(DIR_LST)
-	@-$(RM) mkdir_aux.bat
-	@echo "Diretorio criado com sucesso!"
+	@echo Criando diretorio $(DIR_OUT)\$(DIR_LST)...
+	@$(MKDIR) $(DIR_OUT)\$(DIR_LST)
+	@echo Diretorio criado com sucesso!
 #-----------------------------------------------------------------------------
 else
 $(DIR_OUT)/$(DIR_DEP):
 	@echo "Criando diretorio $(DIR_OUT)/$(DIR_DEP)..."
-	@mkdir -p $(DIR_OUT)/$(DIR_DEP)
+	@$(MKDIR) $(DIR_OUT)/$(DIR_DEP)
 	@echo "Diretorio criado com sucesso!"
 
 $(DIR_OUT)/$(DIR_LST):
 	@echo "Criando diretorio $(DIR_OUT)/$(DIR_LST)..."
-	@mkdir -p $(DIR_OUT)/$(DIR_LST)
+	@$(MKDIR) $(DIR_OUT)/$(DIR_LST)
 	@echo "Diretorio criado com sucesso!"
 endif	
 #-----------------------------------------------------------------------------
