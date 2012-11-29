@@ -1,64 +1,64 @@
 /*                                          **********************
- ********************************************* M”DULO: TEMPLATE **********************************************
- *                                          **********************/
+ ********************************************* M√ìDULO: TEMPLATE **********************************************
+ *                                          *********************/
 /** @file template.c 
  *
- * Veja template.h para mais informaÁıes.
+ *  Veja template.h para mais informa√ß√µes.
  ************************************************************************************************************/
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                           M”DULOS UTILIZADOS                                            **
+ **                                           M√ìDULOS UTILIZADOS                                            **
  **                                                                                                         **
  ************************************************************************************************************/
  
 /**** Sistema ****
  *
- * Inclus„o de arquivos de cabeÁalho da ferramenta de desenvolvimento.
+ * Inclus√£o de arquivos de cabe√ßalho da ferramenta de desenvolvimento.
  * Por exemplo: '#include <stdlib.h>'.
  */
  
-/**** GenÈricos ****
+/**** Gen√©ricos ****
  *
- * Inclus„o de arquivos de cabeÁalho sem um arquivo ".c" correspondente.
+ * Inclus√£o de arquivos de cabe√ßalho sem um arquivo ".c" correspondente.
  * Por exemplo: '#include "stddefs.h"'.
  */
 #include "template_header.h"
  
 /**** Outros ****
  *
- * Inclus„o de arquivos de cabeÁalho de outros mÛdulos utilizados por este.
+ * Inclus√£o de arquivos de cabe√ßalho de outros m√≥dulos utilizados por este.
  * Por exemplo: '#include "serial.h"'.
  */
  
 /**** Tabelas ****
  *
- * Inclus„o dos arquivos ".tab.h" deste mÛdulo.
+ * Inclus√£o dos arquivos ".tab.h" deste m√≥dulo.
  * Por exemplo: '#include "serial.tab.h".
  */
 #include "template.tab.h"
  
 /**** Atual ****
  *
- * Inclus„o do arquivo de cabeÁalho deste mÛdulo.
+ * Inclus√£o do arquivo de cabe√ßalho deste m√≥dulo.
  */
 #include "template.h"
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                           DEFINI«’ES E MACROS                                           **
+ **                                           DEFINI√á√ïES E MACROS                                           **
  **                                                                                                         **
  ************************************************************************************************************/
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                    ESTRUTURAS E DEFINI«’ES DE TIPOS                                     **
+ **                                    ESTRUTURAS E DEFINI√á√ïES DE TIPOS                                     **
  **                                                                                                         **
  ************************************************************************************************************/
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                      PROT”TIPOS DAS FUN«’ES LOCAIS                                      **
+ **                                      PROT√ìTIPOS DAS FUN√á√ïES LOCAIS                                      **
  **                                                                                                         **
  ************************************************************************************************************/
  
@@ -66,58 +66,58 @@ static void funcaoLocalTemplate(void);
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                          VARI¡VEIS EXPORTADAS                                           **
+ **                                          VARI√ÅVEIS EXPORTADAS                                           **
  **                                                                                                         **
  ************************************************************************************************************/
 /*
- * A documentaÁ„o destas vari·veis È realizada no arquivo ".h" deste mÛdulo.
+ * A documenta√ß√£o destas vari√°veis √© realizada no arquivo ".h" deste m√≥dulo.
  */
 INT8U  VariavelExportada1;
 INT16U VariavelExportada2;
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                            VARI¡VEIS GLOBAIS                                            **
+ **                                            VARI√ÅVEIS GLOBAIS                                            **
  **                                                                                                         **
  ************************************************************************************************************/
  
 /** 
- * Vari·vel global n„o exportada 1.
+ *  Vari√°vel global n√£o exportada 1.
  *
- * Esta vari·vel global n„o È exportada para outros mÛdulos, devendo ser documentada aqui.
+ *  Esta vari√°vel global n√£o √© exportada para outros m√≥dulos, devendo ser documentada aqui.
  *
- * @note 
- * Apesar dessa vari·vel n„o ser visÌvel para outros mÛdulos, ela n„o pode possuir o mesmo nome que qualquer
- * outro identificador deste projeto, como por exemplo, uma vari·vel global n„o exportada de outro mÛdulo.
+ *  @note 
+ *  Apesar dessa vari√°vel n√£o ser vis√≠vel para outros m√≥dulos, ela n√£o pode possuir o mesmo nome que qualquer
+ *  outro identificador deste projeto, como por exemplo, uma vari√°vel global n√£o exportada de outro m√≥dulo.
  */
 static BOOL variavelGlobalNaoExportada1;
  
 /** 
- * Vari·vel global n„o exportada 2.
+ *  Vari√°vel global n√£o exportada 2.
  *
- * Esta vari·vel global n„o È exportada para outros mÛdulos, devendo ser documentada aqui.
+ *  Esta vari√°vel global n√£o √© exportada para outros m√≥dulos, devendo ser documentada aqui.
  *
- * @note
- * Diferentemente das vari·veis globais exportadas, as vari·veis globais n„o exportadas devem ser nomeadas 
- * com todas as letras em min˙sculo, exceto a primeira letra de cada palavra a partir da segunda palavra.
+ *  @note
+ *  Diferentemente das vari√°veis globais exportadas, as vari√°veis globais n√£o exportadas devem ser nomeadas 
+ *  com todas as letras em min√∫sculo, exceto a primeira letra de cada palavra a partir da segunda palavra.
  */
 static INT16S variavelGlobalNaoExportada2;
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                           FUN«’ES EXPORTADAS                                            **
+ **                                           FUN√á√ïES EXPORTADAS                                            **
  **                                                                                                         **
  ************************************************************************************************************/
 /*
- * A documentaÁ„o destas funÁıes È realizada no arquivo ".h" deste mÛdulo.
+ * A documenta√ß√£o destas fun√ß√µes √© realizada no arquivo ".h" deste m√≥dulo.
  */
  
 /************************************************************************************************************/
 void InicializaTemplate(void)
 /************************************************************************************************************/
 {
-   /**** InicializaÁ„o deste mÛdulo ****/
-   /*... Insira as inicializaÁıes necess·rias para este mÛdulo aqui! ...*/
+   /**** Inicializa√ß√£o deste m√≥dulo ****/
+   /*... Insira as inicializa√ß√µes necess√°rias para este m√≥dulo aqui! ...*/
 }
  
 /************************************************************************************************************/
@@ -128,18 +128,18 @@ BOOL FuncaoExportada1(INT8S primeiroParametro, INT16U segundoParametro)
  
 /*************************************************************************************************************
  **                                                                                                         **
- **                                             FUN«’ES LOCAIS                                              **
+ **                                             FUN√á√ïES LOCAIS                                              **
  **                                                                                                         **
  ************************************************************************************************************/
  
 /************************************************************************************************************/
-/** DescriÁ„o breve desta funÁ„o local.
+/** Descri√ß√£o breve desta fun√ß√£o local.
  *
- * DescriÁ„o completa da operaÁ„o realizada por esta funÁ„o local.
+ *  Descri√ß√£o completa da opera√ß√£o realizada por esta fun√ß√£o local.
  *
- * @note 
- * Diferentemente das funÁıes exportadas, as funÁıes locais devem ser nomeadas com todas as letras em 
- * min˙sculo, exceto a primeira letra de cada palavra a partir da segunda palavra.
+ *  @note 
+ *  Diferentemente das fun√ß√µes exportadas, as fun√ß√µes locais devem ser nomeadas com todas as letras em 
+ *  min√∫sculo, exceto a primeira letra de cada palavra a partir da segunda palavra.
  ************************************************************************************************************/
 static void funcaoLocalTemplate(void)
 /************************************************************************************************************/
@@ -147,20 +147,20 @@ static void funcaoLocalTemplate(void)
 }
  
 /************************************************************************************************************/
-/** FunÁ„o local para exemplo.
+/** Fun√ß√£o local para exemplo.
  *
- * Esta funÁ„o simplesmente exemplifica como codificar e documentar uma funÁ„o local, a qual somente ser· 
- * visÌvel para este mÛdulo. Geralmente as funÁıes locais s„o funÁıes auxiliares utilizadas pelas outras 
- * funÁıes do mÛdulo.
+ *  Esta fun√ß√£o simplesmente exemplifica como codificar e documentar uma fun√ß√£o local, a qual somente ser√° 
+ *  vis√≠vel para este m√≥dulo. Geralmente as fun√ß√µes locais s√£o fun√ß√µes auxiliares utilizadas pelas outras 
+ *  fun√ß√µes do m√≥dulo.
  *
- * @param primeiroParametro DescriÁ„o do primeiro par‚metro.
- * @param segundoParametro  DescriÁ„o do segundo par‚metro.
+ *  @param primeiroParametro Descri√ß√£o do primeiro par√¢metro.
+ *  @param segundoParametro  Descri√ß√£o do segundo par√¢metro.
  *
- * @return DescriÁ„o do retorno desta funÁ„o.
- * @retval TRUE  DescriÁ„o deste valor de retorno.
- * @retval FALSE DescriÁ„o deste valor de retorno.
+ *  @return Descri√ß√£o do retorno desta fun√ß√£o.
+ *  @retval TRUE  Descri√ß√£o deste valor de retorno.
+ *  @retval FALSE Descri√ß√£o deste valor de retorno.
  *
- * @note ObservaÁıes.
+ *  @note Observa√ß√µes.
  ************************************************************************************************************/
 BOOL funcaoLocalExemplo(INT8S primeiroParametro, INT16U segundoParametro)
 /************************************************************************************************************/
