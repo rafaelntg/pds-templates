@@ -1,6 +1,6 @@
 #summary padrao_desenv_fw_pds Padrão de Desenvolvimento de Firmware da PD Soluções.
-#labels padrão,standard,template,firmware,softwareembarcado
+#labels padrão,standard,template,firmware,software,embarcado,embedded,style,guide,estilo,guia
 
-= Introduction =
+= Padrão de Desenvolvimento de Firmware da PD Soluções =
 
 Este é o padrão de desenvolvimento de software embarcado (firmware) da PD Soluções, fruto de vários anos de experiência e sucessivas melhorias, incluindo regras valiosas para evitar a inclusão e gerar um código-fonte bem documentado, de fácil leitura e bem apresentável.
