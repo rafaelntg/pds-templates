@@ -1,108 +1,108 @@
-#ifndef _TEMPLATE_H
-#define _TEMPLATE_H
+#ifndef _TEMPLATE_H_
+#define _TEMPLATE_H_
 /*                                          **********************
- ********************************************* M”DULO: TEMPLATE **********************************************
+ ********************************************* M√ìDULO: TEMPLATE **********************************************
  *                                          **********************/
 /** @file template.h
  *
- * Substitua este texto por uma descriÁ„o breve deste mÛdulo (arquivos ".c" e ".h").
+ * Substitua este texto por uma descri√ß√£o breve deste m√≥dulo (arquivos ".c" e ".h").
  *
- * Substitua este texto pela descriÁ„o completa deste mÛdulo (arquivos ".c" e ".h").
- * Este mÛdulo È um modelo para a criaÁ„o de novos mÛdulos. Ele contÈm toda a estrutura que um mÛdulo deve 
+ * Substitua este texto pela descri√ß√£o completa deste m√≥dulo (arquivos ".c" e ".h").
+ * Este m√≥dulo √© um modelo para a cria√ß√£o de novos m√≥dulos. Ele cont√©m toda a estrutura que um m√≥dulo deve 
  * conter, sendo composto pelos arquivos:
  *    - template.c;
  *    - template.tab.h (opcional); e
  *    - este aquivo (template.h).
  *
  * @note
- * - N„o sobrescreva os arquivos de template do mÛdulo. Implemente um novo mÛdulo sobre uma cÛpia do template.
- * - Os padrıes de coment·rio que comeÁam com BARRA-ASTERISCO-ASTERISCO, como este, devem ser compilados com a 
+ * - N√£o sobrescreva os arquivos de template do m√≥dulo. Implemente um novo m√≥dulo sobre uma c√≥pia do template.
+ * - Os padr√µes de coment√°rio que come√ßam com BARRA-ASTERISCO-ASTERISCO, como este, devem ser compilados com a 
  *   ferramenta Doxygen (comando: "doxygen.exe doxygen.cfg").
- * - Leia a documentaÁ„o do @b Doxygen para maiores informaÁıes sobre o funcionamento dos recursos de 
- *   documentaÁ„o de cÛdigo.
+ * - Leia a documenta√ß√£o do @b Doxygen para maiores informa√ß√µes sobre o funcionamento dos recursos de 
+ *   documenta√ß√£o de c√≥digo.
  *
  * @warning
- * - … altamente recomendado manter todos os arquivos de template como somente-leitura, evitando assim que 
+ * - √â altamente recomendado manter todos os arquivos de template como somente-leitura, evitando assim que 
  *   eles sejam sobrescritos ao serem utilizados.
  *
  * @attention
- * - A descriÁ„o de cada mÛdulo deve ser realizada no arquivo ".h" do mesmo.
- * - Cada mÛdulo de um projeto de software deve conter, pelo menos, um arquivo ".h" e um ".c".
+ * - A descri√ß√£o de cada m√≥dulo deve ser realizada no arquivo ".h" do mesmo.
+ * - Cada m√≥dulo de um projeto de software deve conter, pelo menos, um arquivo ".h" e um ".c".
  *
- * @author Rafael Noronha <rafael@pdsolucoes.com.br>.
+ * @author Rafael Noronha <rafael@pdsolucoes.com.br>
  *
- * @author PD SoluÁıes
+ * @author PD Solu√ß√µes
  * @date 2012
  *
- * @copyright Insira a licenÁa do cÛdigo-fonte deste mÛdulo aqui.
+ * @copyright Insira a licen√ßa do c√≥digo-fonte deste m√≥dulo aqui.
  ************************************************************************************************************/
 
 /*************************************************************************************************************
  **                                                                                                         **
- **                                          ARQUIVOS DE CABE«ALHO                                          **
+ **                                          ARQUIVOS DE CABE√áALHO                                          **
  **                                                                                                         **
  ************************************************************************************************************/
 
 /**** Sistema ****
  *
- * Inclus„o de arquivos de cabeÁalho da ferramenta de desenvolvimento.
+ * Inclus√£o de arquivos de cabe√ßalho da ferramenta de desenvolvimento.
  * Por exemplo: '#include <stdlib.h>'.
  */
 
-/**** GenÈricos ****
+/**** Gen√©ricos ****
  *
- * Inclus„o de arquivos de cabeÁalho sem um arquivo ".c" correspondente.
+ * Inclus√£o de arquivos de cabe√ßalho sem um arquivo ".c" correspondente.
  * Por exemplo: '#include "stddefs.h"'.
  */
 #include "stddefs.h"
 
 /**** Outros ****
  *
- * Inclus„o de arquivos de cabeÁalho de outros mÛdulos utilizados por este.
+ * Inclus√£o de arquivos de cabe√ßalho de outros m√≥dulos utilizados por este.
  * Por exemplo: '#include "serial.h"'.
  */
 
 /*************************************************************************************************************
  **                                                                                                         **
- **                                           DEFINI«’ES E MACROS                                           **
+ **                                           DEFINI√á√ïES E MACROS                                           **
  **                                                                                                         **
  ************************************************************************************************************/
 
 /*************************************************************************************************************
  **                                                                                                         **
- **                                    ESTRUTURAS E DEFINI«’ES DE TIPOS                                     **
+ **                                    ESTRUTURAS E DEFINI√á√ïES DE TIPOS                                     **
  **                                                                                                         **
  ************************************************************************************************************/
 
 /*************************************************************************************************************
  **                                                                                                         **
- **                                          VARI¡VEIS EXPORTADAS                                           **
+ **                                          VARI√ÅVEIS EXPORTADAS                                           **
  **                                                                                                         **
  ************************************************************************************************************/
 
 /** 
- * Exemplo de vari·vel exportada.
+ * Exemplo de vari√°vel exportada.
  *
- * Esta vari·vel deve ser definida no arquivo ".c" deste mÛdulo.
+ * Esta vari√°vel deve ser definida no arquivo ".c" deste m√≥dulo.
  *
  * @note
- * As vari·veis exportadas devem possuir a primeira letra de cada palavra em mai˙sculo e as demais letras em 
- * min˙sculo.
+ * As vari√°veis exportadas devem possuir a primeira letra de cada palavra em mai√∫sculo e as demais letras em 
+ * min√∫sculo.
  *
  * @attention
- * A palavra reservada @b extern deve ser sempre utilizada para n„o conflitar com a declaraÁ„o da mesma 
- * vari·vel realizada no arquivo ".c" do mesmo mÛdulo.
+ * A palavra reservada @b extern deve ser sempre utilizada para n√£o conflitar com a declara√ß√£o da mesma 
+ * vari√°vel realizada no arquivo ".c" do mesmo m√≥dulo.
  */
 extern INT8U VariavelExportada1;
 
 /** 
- * Segunda vari·vel exportada de exemplo.
+ * Segunda vari√°vel exportada de exemplo.
  *
- * Cada vari·vel deve ser documentada segundo sua funcionalidade no software.
+ * Cada vari√°vel deve ser documentada segundo sua funcionalidade no software.
  *
  * @note
- * V·rios recursos de documentaÁ„o podem ser utilizados. Consulte a documentaÁ„o do Doxygen para mais 
- * informaÁıes.
+ * V√°rios recursos de documenta√ß√£o podem ser utilizados. Consulte a documenta√ß√£o do Doxygen para mais 
+ * informa√ß√µes.
  *
  * @see VariavelExportada1
  */
@@ -110,37 +110,37 @@ extern INT16U VariavelExportada2;
 
 /*************************************************************************************************************
  **                                                                                                         **
- **                                           FUN«’ES EXPORTADAS                                            **
+ **                                           FUN√á√ïES EXPORTADAS                                            **
  **                                                                                                         **
  ************************************************************************************************************/
 
 /************************************************************************************************************/
-/** InicializaÁ„o deste mÛdulo.
+/** Inicializa√ß√£o deste m√≥dulo.
  *
- * Realiza todas as inicializaÁıes necess·rias para a execuÁ„o deste mÛdulo.
+ * Realiza todas as inicializa√ß√µes necess√°rias para a execu√ß√£o deste m√≥dulo.
  *
  * @return void
  *
- * @note Esta funÁ„o deve ser chamada durante a inicializaÁ„o do software caso este mÛdulo seja utilizado.
+ * @note Esta fun√ß√£o deve ser chamada durante a inicializa√ß√£o do software caso este m√≥dulo seja utilizado.
  ************************************************************************************************************/
 void InicializaTemplate(void);
 
 /************************************************************************************************************/
-/** FunÁ„o exportada para os outros mÛdulos.
+/** Fun√ß√£o exportada para os outros m√≥dulos.
  *
- * Esta funÁ„o simplesmente exemplifica como codificar e documentar uma funÁ„o que ser· visÌvel para os outros 
- * mÛdulos do projeto.
+ * Esta fun√ß√£o simplesmente exemplifica como codificar e documentar uma fun√ß√£o que ser√° vis√≠vel para os outros 
+ * m√≥dulos do projeto.
  *
- * @param primeiroParametro DescriÁ„o do primeiro par‚metro.
- * @param segundoParametro  DescriÁ„o do segundo par‚metro.
+ * @param primeiroParametro Descri√ß√£o do primeiro par√¢metro.
+ * @param segundoParametro  Descri√ß√£o do segundo par√¢metro.
  *
- * @return DescriÁ„o do retorno desta funÁ„o.
- * @retval TRUE  DescriÁ„o deste valor de retorno.
- * @retval FALSE DescriÁ„o deste valor de retorno.
+ * @return Descri√ß√£o do retorno desta fun√ß√£o.
+ * @retval TRUE  Descri√ß√£o deste valor de retorno.
+ * @retval FALSE Descri√ß√£o deste valor de retorno.
  *
  * @note
- * As funÁıes exportadas devem possuir a primeira letra de cada palavra em mai˙sculo e as demais letras em 
- * min˙sculo.
+ * As fun√ß√µes exportadas devem possuir a primeira letra de cada palavra em mai√∫sculo e as demais letras em 
+ * min√∫sculo.
  ************************************************************************************************************/
 BOOL FuncaoExportada1(INT8S primeiroParametro, INT16U segundoParametro);
 
